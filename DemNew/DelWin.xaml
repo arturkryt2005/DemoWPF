@@ -1,19 +1,20 @@
-﻿<Window x:Class="DemNew.WinMan"
+﻿<Window x:Class="DemNew.DelWin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemNew"
         mc:Ignorable="d"
-        Title="WinMan" Height="450" Width="800">
+        Title="DelWin" Height="450" Width="800">
     <Grid>
         <Menu>
             <MenuItem Header="_Назад" x:Name="Back" Click="Back_Click"/>
             <MenuItem Header="_Редактировать" x:Name="Edit" Click="Edit_Click"/>
             <MenuItem Header="_Добавить" x:Name="Add" Click="Add_Click"/>
-            <MenuItem Header="_Удалить" x:Name="Delete" Click="Delete_Click"/>
+            <MenuItem Header="_Просмотреть" x:Name="Delete" Click="Delete_Click"/>
             <MenuItem Header="_Выйти" x:Name="Exit" Click="Exit_Click"/>
-        </Menu>
+            <MenuItem Header="_Удалить" x:Name="Deletee" Click="Deletee_Click"/>
+        </Menu> 
         <DataGrid x:Name="vivod" Margin="30"/>
     </Grid>
 </Window>

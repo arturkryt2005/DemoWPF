@@ -1,19 +1,22 @@
-﻿<Window x:Class="DemNew.WinMan"
+﻿<Window x:Class="DemNew.EditWin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemNew"
         mc:Ignorable="d"
-        Title="WinMan" Height="450" Width="800">
+        Title="EditWin" Height="450" Width="800">
     <Grid>
         <Menu>
             <MenuItem Header="_Назад" x:Name="Back" Click="Back_Click"/>
-            <MenuItem Header="_Редактировать" x:Name="Edit" Click="Edit_Click"/>
+            <MenuItem Header="_Просмотреть" x:Name="Edit" Click="Edit_Click"/>
             <MenuItem Header="_Добавить" x:Name="Add" Click="Add_Click"/>
-            <MenuItem Header="_Удалить" x:Name="Delete" Click="Delete_Click"/>
+            <MenuItem Header="_Просмотреть" x:Name="Delete" Click="Delete_Click"/>
             <MenuItem Header="_Выйти" x:Name="Exit" Click="Exit_Click"/>
+            <MenuItem Header="_Сохранить" x:Name="Deletee" Click="Save_Click"/>
         </Menu>
-        <DataGrid x:Name="vivod" Margin="30"/>
+        <DataGrid Margin="30" x:Name="vivod" 
+                  CellEditEnding="vivod_CellEditEnding" 
+                  SelectionChanged="vivod_SelectionChanged"/>
     </Grid>
 </Window>

@@ -10,7 +10,11 @@ namespace DemNew
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Вход в аккаунт при нажатии на кнопку войти
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             User544Entities db = new User544Entities();

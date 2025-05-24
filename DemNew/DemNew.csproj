@@ -64,6 +64,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddWin.xaml.cs">
+      <DependentUpon>AddWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DelWin.xaml.cs">
+      <DependentUpon>DelWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditWin.xaml.cs">
+      <DependentUpon>EditWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Legal_Buyers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -90,6 +99,18 @@
     <Compile Include="WinMan.xaml.cs">
       <DependentUpon>WinMan.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DelWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
