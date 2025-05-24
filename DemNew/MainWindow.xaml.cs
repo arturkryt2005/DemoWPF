@@ -1,0 +1,47 @@
+﻿using System;
+using System.Linq;
+using System.Windows;
+
+namespace DemNew
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            User544Entities db = new User544Entities();
+
+            bool emailExists = db.Managers.Any(m => m.Email == text.Text);
+
+            if (emailExists)
+            {
+                var man = db.Managers.FirstOrDefault(m => m.Email == text.Text && m.Password == passw.Text);
+                if (man != null)
+                {
+                    new WinMan().Show();
+                    this.Close();
+                    MessageBox.Show("Вы перешли на страницу пользователя");
+                }
+                else
+                {
+                    MessageBox.Show("Неверный пароль");
+                }
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(passw.Text))
+                {
+                    MessageBox.Show("Неверная почта и пароль");
+                }
+                else
+                {
+                    MessageBox.Show("Неверная почта");
+                }
+            }
+        }
+    }
+}
