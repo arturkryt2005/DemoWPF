@@ -7,6 +7,46 @@
         mc:Ignorable="d"
         Title="AddWin" Height="450" Width="800">
     <Grid>
-        
+        <Menu>
+            <MenuItem Header="_Назад" x:Name="Back" Click="Back_Click"/>
+            <MenuItem Header="_Редактировать" x:Name="Edit" Click="Edit_Click"/>
+            <MenuItem Header="_Добавить" x:Name="Add" Click="Add_Click"/>
+            <MenuItem Header="_Удалить" x:Name="Delete" Click="Delete_Click"/>
+            <MenuItem Header="_Выйти" x:Name="Exit" Click="Exit_Click"/>
+        </Menu>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="409">
+                <TextBlock  Text="ФИО:" />
+                <TextBox x:Name="txtFIO" />
+
+                <TextBlock Text="Пол:" />
+                <ComboBox x:Name="cmbGender" >
+                    <ComboBoxItem Content="Мужской"/>
+                    <ComboBoxItem Content="Женский"/>
+                </ComboBox>
+
+                <TextBlock Text="Email:"/>
+                <TextBox  x:Name="txtEmail"/>
+
+                <TextBlock Text="Дата рождения:"/>
+                <DatePicker x:Name="dpDateOfBirth"/>
+
+                <TextBlock Text="Страна:" />
+                <TextBox x:Name="txtCountry" />
+
+                <TextBlock Text="Телефон:" />
+                <TextBox x:Name="txtPhone" />
+
+                <TextBlock  Text="Должность:" />
+                <TextBox  x:Name="txtPost" />
+
+                <TextBlock  Text="Стаж:" />
+                <TextBox x:Name="txtStage" Margin="5"/>
+
+                <TextBlock Text="Пароль:" />
+                <PasswordBox  x:Name="txtPassword" />
+
+                <TextBlock  Text="Фото (путь к файлу):"/>
+                <TextBox x:Name="txtPhoto" />
+        </StackPanel>
     </Grid>
 </Window>
