@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace DemNew
 {
@@ -25,6 +15,9 @@ namespace DemNew
             InitializeComponent();
             LoadMan();
         }
+        /// <summary>
+        /// Метод загрузки пользователей
+        /// </summary>
         public void LoadMan()
         {
             vivod.ItemsSource = db.Managers.ToList();
