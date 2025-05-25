@@ -10,9 +10,9 @@
         <Menu>
             <MenuItem Header="_Назад" x:Name="Back" Click="Back_Click"/>
             <MenuItem Header="_Редактировать" x:Name="Edit" Click="Edit_Click"/>
-            <MenuItem Header="_Добавить" x:Name="Add" Click="Add_Click"/>
             <MenuItem Header="_Удалить" x:Name="Delete" Click="Delete_Click"/>
-            <MenuItem Header="_Выйти" x:Name="Exit" Click="Exit_Click"/>
+            <MenuItem Header="_Выйти" x:Name="Exit" Click="Exit_Click" />
+            <MenuItem Header="_Добавить" x:Name="Add" Click="Add_Click" />
         </Menu>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="409">
                 <TextBlock  Text="ФИО:" />
