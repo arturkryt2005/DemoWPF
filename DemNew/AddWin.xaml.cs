@@ -30,11 +30,21 @@ namespace DemNew
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtFIO.Text) ||
-                    string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                    string.IsNullOrWhiteSpace(txtPassword.Password))
+                if (string.IsNullOrWhiteSpace(txtFIO.Text))
                 {
-                    MessageBox.Show("Заполните обязательные поля (ФИО, Email, Пароль)");
+                    MessageBox.Show("Введите ФИО менеджера");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtEmail.Text))
+                {
+                    MessageBox.Show("Введите Email менеджера");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtPassword.Password))
+                {
+                    MessageBox.Show("Введите пароль");
                     return;
                 }
 
@@ -43,6 +53,18 @@ namespace DemNew
                     MessageBox.Show("Менеджер с таким Email уже существует");
                     return;
                 }
+
+                if (dpDateOfBirth.SelectedDate == null)
+                {
+                    MessageBox.Show("Укажите дату рождения");
+                    return;
+                }
+
+                if (dpDateOfBirth.SelectedDate > DateTime.Now)
+                {
+                    MessageBox.Show("Дата рождения не может быть в будущем");
+                    return;
+                }                
 
                 var newManager = new Managers
                 {

@@ -17,6 +17,19 @@ namespace DemNew
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(text.Text))
+            {
+                MessageBox.Show("Пожалуйста, введите email");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(passw.Text))
+            {
+                MessageBox.Show("Пожалуйста, введите пароль");
+                return;
+            }
+
             User544Entities db = new User544Entities();
 
             bool emailExists = db.Managers.Any(m => m.Email == text.Text);
