@@ -17,15 +17,16 @@ namespace DemNew
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(text.Text))
+            if (text.Text == "")
             {
-                MessageBox.Show("Пожалуйста, введите email");
+                MessageBox.Show("Введите почту");
                 return;
+
             }
 
-            if (string.IsNullOrWhiteSpace(passw.Text))
+            if (passw.Text == "")
             {
-                MessageBox.Show("Пожалуйста, введите пароль");
+                MessageBox.Show("Введите пароль");
                 return;
             }
 
